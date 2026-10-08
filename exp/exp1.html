@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Kathleen Zhen | DES 157A</title>
+</head>
+
+<body>
+            <h1>Experiment 1</h1>
+            <h2>Open the console to see the functionality of the code!</h2>
+
+            <script>
+
+                // This program takes a lowercase string and capitalizes the first letter of every word.
+
+    // sequence  prompt -> store string
+    var str = prompt("Enter a lowercase string:");
+    var newStr = "";
+
+    // loop
+    for (var i = 0; i < str.length; i++) {
+   
+    // selection
+    if (i == 0 || str[i - 1] == " ") {
+        newStr += str[i].toUpperCase();
+    } else {
+        newStr += str[i];
+    }
+}
+
+    console.log(newStr);
+            
+            </script>
+
+    
+</body>
+</html>
