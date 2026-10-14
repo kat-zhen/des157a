@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Experiment 2</title>
+</head>
+
+<body>
+            <h1>Experiment 2</h1>
+            <p>What's your favorite color?</p>
+            <p id="result"></p>
+
+            <script>
+
+                // This asks the user what their favorite color is and changes the background
+
+    // colors in list
+    var colors = ["pink", "blue", "green", "red", "purple"]
+
+    // asks users to choose color and returns their answer
+    function askColor(){
+        return prompt("Choose pink, blue, green, red, or purple");  
+    }
+
+    function changeColor(color) {
+        
+        // checks if the color is in the list
+        
+        if (colors.includes(color)){
+            
+        // changes background color   
+            
+        document.body.style.backgroundColor = color;
+
+        // displays user's choice on page
+
+        document.querySelector("#result").innerHTML = "You chose " + color + "!";
+
+        } else {
+
+        // displays message if color isn't on the list
+
+        document.querySelector("#result").innerHTML = "Invalid color!";
+        }
+    }
+
+    var favorite = askColor();
+
+    changeColor(favorite);
+            
+            </script>
+
+    
+</body>
+</html>
