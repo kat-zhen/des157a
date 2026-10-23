@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: "Kulim Park";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+header {
+    text-align: center;
+    padding: 25px 20px 15px;
+    background-color: #fff2b3;
+}
+
+.madlib {
+    position: relative;
+    top: 10px;
+    margin: 0 0 10px;
+    font-family: "Just Me Again Down Here";
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #837463;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Just Me Again Down Here";
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #836363;
+}
+
+main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 30px 40px;
+    box-sizing: border-box;
+}
+
+.story {
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+}
+
+.blank-field {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+    margin: 0 3px;
+    line-height: 1.2;
+}
+
+.blank-field label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-style: italic;
+    color: #4ac4e3;
+    text-align: center;
+}
+
+.blank-field input {
+    width: 120px;
+    max-width: 100%;
+    padding: 4px 2px;
+    border: none;
+    border-bottom: 1px solid #4ac4e3;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: #222222;
+    font-family: "Kulim Park";
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.blank-field input:focus {
+    border-bottom: 2px solid #4ac4e3;
+}
+
+.action {
+    margin: 35px 0;
+    text-align: center;
+}
+
+.submit-button {
+    padding: 10px 24px;
+    border-radius: 0;
+    background-color: #fcf1bc;
+    color: #836363;
+    border: 1px solid #fcf1bc;;
+    font-family: "Kulim Park";
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.submit-button:hover {
+    border: 1px solid #836363;
+    border-radius: 0;
+    background-color: #836363;
+    color: #fcf1bc;
+}
+
+#result {
+    margin: 35px 0;
+    text-align: center;
+}
+
+#result h2 {
+    margin-bottom: 20px;
+    font-family: "Kulim Park";
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#completedStory {
+    font-size: 18px;
+    line-height: 2;
+    text-align: left;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+}
+
+.word-help {
+    max-width: 400px;
+    margin: 10px auto 35px;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+    border: 6px dotted #fcf1bc;
+}
+
+.word-help p {
+    margin: 0 0 12px;
+    padding-left: 25px;
+    color: #4ac4e3;
+}
+
+.word-help ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.word-help li {
+    margin-bottom: 3px;
+}
+
+.pics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.pics h1 {
+    margin: 0;
+   white-space: nowrap;
+}
+
+.title-image {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.tilted-utensils {
+    transform: rotate(15deg);
+}
+
+.tilted-egg {
+    width: 75px;
+    height: 75px;
+    transform: rotate(-150deg);
+}
+
+.fire {
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.fire-left {
+    left: 0;
+}
+
+.fire-right {
+    right: -35px;
+}
