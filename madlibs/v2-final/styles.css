@@ -36,10 +36,9 @@ h1 {
 }
 
 main {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 50px 30px 40px;
-    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
 }
 
 .story {
@@ -136,10 +135,10 @@ footer {
 }
 
 .word-help {
-    max-width: 400px;
+    max-width: 450px;
     margin: 10px auto 35px;
     padding: 15px 20px;
-    text-align: left;
+    text-align: center;
     font-size: 15px;
     line-height: 1.5;
     border: 6px dotted #fcf1bc;
@@ -147,17 +146,22 @@ footer {
 
 .word-help p {
     margin: 0 0 12px;
-    padding-left: 25px;
+    padding-left: 0;
     color: #4ac4e3;
+    text-align: center;
 }
 
 .word-help ul {
+    display: inline-block;
+    max-width: 100%;
     margin: 0;
     padding-left: 25px;
+    text-align: left;
+    overflow-wrap: anywhere;
 }
 
 .word-help li {
-    margin-bottom: 3px;
+    margin-bottom: 8px;
 }
 
 .pics {
@@ -208,3 +212,78 @@ footer {
 .fire-right {
     right: -35px;
 }
+
+@media (max-width: 600px) {
+   
+    main {
+        padding: 20px;
+    }
+
+
+    .pics {
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .title-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .story {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .word-help {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .word-help ul {
+        display: inline-block;
+    }
+
+    .fire {
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+    .submit-button, #tryAgain {
+        transition: transform 0.2s;
+    }
+
+    .submit-button:hover, #tryAgain:hover {
+        transform: scale(1.05);
+    }
+    
+    header h1 {
+        animation: appear 1s ease;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fire {
+        animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+        from {
+            transform: scale(0.90);
+        }
+        to {
+            transform: scale(1.05);
+        }
+    }

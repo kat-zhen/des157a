@@ -36,10 +36,9 @@ h1 {
 }
 
 main {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 50px 30px 40px;
-    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
 }
 
 .story {
@@ -152,8 +151,8 @@ footer {
 }
 
 .word-help ul {
-    margin: 0;
-    padding-left: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .word-help li {
@@ -207,4 +206,74 @@ footer {
 
 .fire-right {
     right: -35px;
+}
+
+@media (max-width: 600px) {
+   
+    main {
+        padding: 20px;
+    }
+
+
+    .pics {
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .title-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .story {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .word-help ul {
+        display: block;
+    }
+
+    .fire {
+        width: 100px;
+        height: auto;
+    }
+
+
+    .submit-button, #tryAgain {
+        transition: transform 0.2s;
+    }
+
+    .submit-button:hover, #tryAgain:hover {
+        transform: scale(1.05);
+    }
+    
+    header h1 {
+        animation: appear 1s ease;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fire {
+        animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+        from {
+            transform: scale(0.90);
+        }
+        to {
+            transform: scale(1.05);
+        }
+    }
 }
