@@ -122,9 +122,12 @@ main {
 }
 
 #completedStory {
+    padding: 25x;
+    background-color: fff9df;
+    border-radius: 8px;
     font-size: 18px;
     line-height: 2;
-    text-align: left;
+    text-align: center;
 }
 
 footer {
@@ -211,6 +214,38 @@ footer {
 
 .fire-right {
     right: -35px;
+}
+
+#result h2 {
+    font-family: "Just Me Again Down Here";
+    font-size: 40px;
+    color: #836363;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: #fcf1bc;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 8px;
+}
+
+#completedStory {
+    padding: 25px;
+    background-color: #fff9df;
+    border: 2px dashed #fcf1bc;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+}
+
+#tryAgain {
+    padding: 10px 24px;
+    background-color: #fcf1bc;
+    color: #836363;
+    border: 1 px solid #fcf1bc;
+    font-family: "Kulim Park";
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 @media (max-width: 600px) {
