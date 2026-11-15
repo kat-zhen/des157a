@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #171717;
+    color: #f1f0ee;
+    font-family: "Cormorant", serif;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.photos {
+    width: 55%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px;
+}
+
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.slideshow img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slideshow img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.story {
+    width: 45%;
+    min-height: 100vh;
+    padding: 75px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story > p:first-child {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    color: #91a1ef;
+}
+
+.story h1 {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.story > p:nth-of-type(2) {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.story > h2 {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    margin-bottom: 25px;
+}
+
+
+.captions h2 {
+    font-family: "Calligraffitti";
+    font-size: 25px;
+    color: #91a1ef;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.captions p {
+    font-size: 16px;
+    line-height: 1.8;
+}
