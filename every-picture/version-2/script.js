@@ -2,18 +2,21 @@
     "use strict";
     console.log("reading js");
 
-    // selects the slideshow
-    const slideshow = document.querySelector(".slideshow");
-    
-    // duplicates all pics
-    const pictures = slideshow.innerHTML;
-    slideshow.innerHTML = pictures + pictures;
+   const slideshow = document.querySelector(".slideshow");
+   const pictures = slideshow.innerHTML;
+   const desktop = window.matchMedia("(min-width: 800px)");
 
-    // moves pics up continously
+   // duplicate pics on desktop
+   if (desktop.matches) {
+    slideshow.innerHTML = pictures + pictures;
+   }
+
+   // moves pics continuously on desktop 
+   if (desktop.matches) {
     slideshow.animate(
         [
-            { transform: "translateY(0)"},
-            { transform: "translateY(-50%)"}
+            { transform: "translateY(0)" },
+            { transform: "translateY(-50%)" }
         ],
         {
             duration: 60000,
@@ -21,26 +24,46 @@
             easing: "linear"
         }
     );
+   }
 
-    // selects all pics and captions
-    const photos = document.querySelectorAll(".slideshow img");
-    const captions = document.querySelectorAll(".captions div");
+   // selects all pics and captions
+   const photos = document.querySelectorAll(".slideshow img");
+   const captions = document.querySelectorAll(".captions div");
 
-    // connects each pic to its caption
-    for (let i = 0; i < photos.length; i++) {
+   // matches each pic to its caption 
+   for (let i = 0; i < photos.length; i++) {
+        const caption= document.querySelector("#" + photos[i].dataset.caption);
 
-        // finds matching caption
-        const caption = captions[i % captions.length];
-
-        // shows caption when hovering over a pic
+        // shows captions when hovering on desktop
         photos[i].addEventListener("mouseenter", function() {
-            caption.classList.add("show");
+            if (desktop.matches) {
+                for (let j = 0; j < captions.length; j++) {
+                    captions[j].classList.remove("show");
+                }
+
+                caption.classList.add("show");
+            }
+
         });
 
-        // hides the captions when mouse leaves pic
+        // hides captions when move leaves pic
         photos[i].addEventListener("mouseleave", function() {
-            caption.classList.remove("show");
+            if (desktop.matches) {
+                caption.classList.remove("show");
+            }
         });
+
+        // shows captions when clicking on mobile
+        photos[i].addEventListener("click", function() {
+            if (!desktop.matches) {
+                for (let j = 0; j < captions.length; j++) {
+                    captions[j].classList.remove("show");
+                }
+
+                caption.classList.add("show");
+            }
+        });
+
     }
 
-})();
+   })();
